@@ -1,8 +1,8 @@
 <template>
   <div id="app">
       <nav>
-        <router-link to='/'>Accueil</router-link> |
-        <router-link to='/about'>A propos</router-link>
+        <!-- <router-link to='/'>Accueil</router-link> |
+        <router-link to='/about'>A propos</router-link> -->
       </nav>
       <router-view />
     </div>
@@ -18,12 +18,19 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 </style>

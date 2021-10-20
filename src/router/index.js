@@ -11,7 +11,7 @@ const routes = [
         name:'About',
         path:'/about',
         component: About,
-    }
+    },
 ];
 
 const router =  createRouter({
