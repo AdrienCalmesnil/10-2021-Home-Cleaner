@@ -36,7 +36,7 @@
       <div class="but_login" v-if="mode == 'login'">
         <button id="but_login">Se connecter</button>
       </div>
-      <div class="but_login" :class="{'button--disabled' : !validatedFields()}" v-else>
+      <div @click="createAccount()" class="but_login" v-else>
         <button id="but_login">Créer mon compte</button>
       </div>
     </div>
@@ -50,26 +50,9 @@ export default {
       return{
           mode:"login",
           email:"",
-          prenom:'',
-          nom:'',
-          password:''
-      }
-  },
-  computed:{
-      validatedFields: function(){
-          if(this.mode == 'create'){
-              if(this.email != "" && this.prenom != "" && this.nom != "" && this.password != ""){
-                  return true;
-              }else{
-                  return false;
-              }
-          }else{
-              if(this.email != "" && this.password != ""){
-                  return true;
-              }else{
-                  return false;
-              }
-          }
+          prenom:"",
+          nom:"",
+          password:"",
       }
   },
   methods:{
@@ -78,6 +61,14 @@ export default {
       },
       switchToLogin: function(){
           this.mode = 'login'
+      },
+      createAccount: function(){
+          this.$store.dispatch('createAccount', {
+              email: this.email,
+              prenom: this.prenom,
+              nom: this.nom,
+              password: this.password,
+          })
       }
   }
 };
