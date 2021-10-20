@@ -1,6 +1,6 @@
 <template>
   <div class="home_wrapper">
-    <router-link to="/about">
+    <router-link to="/login">
       <h1>HomeCleaner</h1>
     </router-link>
   </div>
