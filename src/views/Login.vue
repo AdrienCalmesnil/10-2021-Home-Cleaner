@@ -100,8 +100,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #fefbec 0%, rgba(255, 253, 244, 0) 100%),
-    rgba(226, 209, 195, 0.75);
 }
 
 .login_box {

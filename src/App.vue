@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-      <nav>
-      </nav>
       <router-view />
     </div>
 </template>
@@ -24,11 +22,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  
 }
 
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: linear-gradient(180deg, #fefbec 0%, rgba(254, 251, 236, 0) 100%),
+    rgba(226, 209, 195, 0.75);
+    background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 </style>

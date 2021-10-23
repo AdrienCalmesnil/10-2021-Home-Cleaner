@@ -21,8 +21,6 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #fefbec 0%, rgba(254, 251, 236, 0) 100%),
-    rgba(226, 209, 195, 0.75);
 }
 
 a {
