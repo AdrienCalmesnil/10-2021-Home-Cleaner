@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Login from '@/views/Login.vue'
 import NotFound from '@/views/NotFound.vue'
+import Services from '@/views/Services.vue'
 
 const routes = [
     {
@@ -36,6 +37,14 @@ const routes = [
             title:'404 Not Found'
         }
     },
+    {
+        name:'Services',
+        path:'/services',
+        component: Services,
+        meta:{
+            title:"Services"
+        },
+    }, 
 ];
 
 const router =  createRouter({

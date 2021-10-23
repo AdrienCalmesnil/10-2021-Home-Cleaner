@@ -8,20 +8,42 @@
       <div class="box_no_account create">
         <p v-if="mode == 'login'">
           Tu n'as pas encore de compte ?
-          <span class="create_account" @click="switchToCreateAccount()">Créer un compte</span>
+          <span class="create_account" @click="switchToCreateAccount()"
+            >Créer un compte</span
+          >
         </p>
         <p v-else>
           Tu as déjà un compte ?
-          <span class="create_account" @click="switchToLogin()">Se connecter</span>
+          <span class="create_account" @click="switchToLogin()"
+            >Se connecter</span
+          >
         </p>
       </div>
       <form action="">
         <div class="mail">
-          <input v-model="email" type="email" id="email" placeholder="Adresse mail" required />
+          <input
+            v-model="email"
+            type="email"
+            id="email"
+            placeholder="Adresse mail"
+            required
+          />
         </div>
         <div class="username" v-if="mode == 'create'">
-                <input v-model="prenom" type="text" id="prenom" placeholder="Prénom" required />
-                <input v-model="nom" type="text" id="nom" placeholder="Nom" required />
+          <input
+            v-model="prenom"
+            type="text"
+            id="prenom"
+            placeholder="Prénom"
+            required
+          />
+          <input
+            v-model="nom"
+            type="text"
+            id="nom"
+            placeholder="Nom"
+            required
+          />
         </div>
         <div class="password">
           <input
@@ -33,11 +55,12 @@
           />
         </div>
       </form>
+      
       <div class="but_login" v-if="mode == 'login'">
-        <button id="but_login">Se connecter</button>
+          <button @click="goToServices()" id="but_login">Se connecter</button>
       </div>
-      <div @click="createAccount()" class="but_login" v-else>
-        <button id="but_login">Créer mon compte</button>
+      <div class="but_login" v-else>
+        <button @click="goToServices()" id="but_login">Créer mon compte</button>
       </div>
     </div>
   </div>
@@ -46,31 +69,26 @@
 <script>
 export default {
   name: "Login",
-  data: function(){ 
-      return{
-          mode:"login",
-          email:"",
-          prenom:"",
-          nom:"",
-          password:"",
-      }
+  data: function() {
+    return {
+      mode: "login",
+      email: "",
+      prenom: "",
+      nom: "",
+      password: "",
+    };
   },
-  methods:{
-      switchToCreateAccount: function(){
-          this.mode = 'create'
-      },
-      switchToLogin: function(){
-          this.mode = 'login'
-      },
-      createAccount: function(){
-          this.$store.dispatch('createAccount', {
-              email: this.email,
-              prenom: this.prenom,
-              nom: this.nom,
-              password: this.password,
-          })
-      }
-  }
+  methods: {
+    switchToCreateAccount() {
+      this.mode = "create";
+    },
+    switchToLogin() {
+      this.mode = "login";
+    },
+    goToServices() {
+      this.$router.push('/services');
+    }
+  },
 };
 </script>
 
@@ -116,89 +134,87 @@ export default {
   color: #88826b;
 }
 
-.create_account{
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
+.create_account {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.mail, .username, .password{
-    height: 50px;
+.mail,
+.username,
+.password {
+  height: 50px;
 }
 
 input {
-    padding: 0 0 5px 6px;
+  padding: 0 0 5px 6px;
   outline: 0;
   border-width: 0 0 2px;
   border-color: #83735b;
   background: none;
-  font-family: 'Poppins',sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   letter-spacing: 0.7px;
-  color: #B5AF98;
+  color: #b5af98;
 }
 
-::placeholder{
-  font-family: 'Poppins',sans-serif;
+::placeholder {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   letter-spacing: 0.7px;
-  color: #B5AF98;
+  color: #b5af98;
 }
 
-.mail{
-    margin-bottom: 30px;
+.mail {
+  margin-bottom: 30px;
 }
 
-#email{
-    width: 100%;
+#email {
+  width: 100%;
 }
 
-.username{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 30px;
+.username {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
 }
 
-#prenom, #nom{
-    width: 42%;
+#prenom,
+#nom {
+  width: 42%;
 }
 
-.password{
-    margin-bottom: 20px;
+.password {
+  margin-bottom: 20px;
 }
 
-#password{
-    width: 100%;
+#password {
+  width: 100%;
 }
 
-#but_login{
-    width: 100%;
-    padding: 10px 0;
-    background: #E9E3D1;
-    border: none;
-    border-radius: 10px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    color: #1C4A15;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+#but_login {
+  width: 100%;
+  padding: 10px 0;
+  background: #e9e3d1;
+  border: none;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: #1c4a15;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.but_login{
-    transition: all 0.3s ease;
+.but_login {
+  transition: all 0.3s ease;
 }
 
-.but_login:hover{
-    transform: scale(1.03);
-    
+.but_login:hover {
+  transform: scale(1.03);
 }
-
-
-
-
 </style>
