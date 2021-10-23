@@ -4,6 +4,7 @@ import About from '@/views/About.vue'
 import Login from '@/views/Login.vue'
 import NotFound from '@/views/NotFound.vue'
 import Services from '@/views/Services.vue'
+import Header from '@/components/Header.vue'
 
 const routes = [
     {
@@ -44,7 +45,15 @@ const routes = [
         meta:{
             title:"Services"
         },
-    }, 
+    },
+    {
+        name:'Header',
+        path:'/header',
+        component:Header,
+        meta:{
+            title:"Header"
+        }, 
+    }
 ];
 
 const router =  createRouter({
