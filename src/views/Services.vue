@@ -9,29 +9,29 @@
         <div class="box_right right">
           <div class="contact">
             <p class="contact_name">Ginette Ménagère</p>
-            <div class="contact_button"><button>Contact</button></div>
+            <div class="contact_button"><button>Contacter</button></div>
           </div>
           <p class="dispo">Disponible : {{ date.Ginette }}</p>
           <p class="tarif">Tarif horaire : {{ tarif.Ginette }}€/heure</p>
         </div>
         <div class="box_left left">
-          <img src="../../public/assets/images/ginette.jpg" alt="" />
+          <img src="../../public/assets/images/bernard.jpg" alt="" />
         </div>
         <div class="box_right right">
           <div class="contact">
             <p class="contact_name">Bernard Savon</p>
-            <div class="contact_button"><button>Contact</button></div>
+            <div class="contact_button"><button>Contacter</button></div>
           </div>
           <p class="dispo">Disponible : {{ date.Bernard }}</p>
           <p class="tarif">Tarif horaire : {{ tarif.Bernard }}€/heure</p>
         </div>
         <div class="box_left left">
-          <img src="../../public/assets/images/ginette.jpg" alt="" />
+          <img src="../../public/assets/images/jean.jpg" alt="" />
         </div>
         <div class="box_right right">
           <div class="contact">
             <p class="contact_name">Jean Raenette</p>
-            <div class="contact_button"><button>Contact</button></div>
+            <div class="contact_button"><button>Contacter</button></div>
           </div>
           <p class="dispo">Disponible : {{ date.Jean }}</p>
           <p class="tarif">Tarif horaire : {{ tarif.Jean }}€/heure</p>
