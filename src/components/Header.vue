@@ -26,8 +26,7 @@ export default {
 </script>
 
 <style scoped>
-
-.header_wrapper{
+.container{
     position: relative;
     height: 60px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -65,6 +64,9 @@ export default {
 
 .items li{
     display: inline-block;
+}
+
+.items #item_one{
     margin-right: 50px;
 }
 </style>
