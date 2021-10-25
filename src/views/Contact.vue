@@ -18,14 +18,18 @@
         </div>
         <div class="contact_wrapper_bottom bottom">
           <div class="bottom_left">
-            <p>{{ services.Ginette }} services réalisés</p>
-            <p>{{ clients.Ginette }} clients</p>
+            <p class="services">{{ services.Ginette }} services réalisés</p>
+            <p class="clients">{{ clients.Ginette }} clients</p>
           </div>
           <div class="bottom_right">
-            <p></p>
-            <p></p>
+            <p class="dispo">Disponible le : {{ dispo.Ginette }}</p>
+            <p class="tarif">Tarif horaire : {{ tarif.Ginette }}€/heure</p>
           </div>
         </div>
+        <footer>
+          <div class="footer_left">gauche</div>
+          <div class="footer_right">droite</div>
+        </footer>
       </div>
     </div>
   </div>
@@ -64,6 +68,12 @@ export default {
       clients: {
         Ginette: 300,
       },
+      dispo: {
+        Ginette: "lundi/mardi",
+      },
+      tarif: {
+        Ginette: 10,
+      },
     };
   },
 };
@@ -88,13 +98,16 @@ export default {
 
 .top_left {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 20%;
 }
 
 img {
   width: 200px;
   height: 200px;
+  border-radius: 28px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .name,
@@ -120,5 +133,24 @@ p {
 
 .bottom_left {
   border-right: 2px solid #1c4a15;
+  padding-left: 16%;
+}
+
+.bottom_right {
+  padding-left: 16%;
+}
+
+.services,
+.clients,
+.dispo,
+.tarif {
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 </style>

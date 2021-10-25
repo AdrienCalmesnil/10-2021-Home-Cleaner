@@ -55,9 +55,9 @@
           />
         </div>
       </form>
-      
+
       <div class="but_login" v-if="mode == 'login'">
-          <button @click="goToServices()" id="but_login">Se connecter</button>
+        <button @click="goToServices()" id="but_login">Se connecter</button>
       </div>
       <div class="but_login" v-else>
         <button @click="goToServices()" id="but_login">Créer mon compte</button>
@@ -86,8 +86,8 @@ export default {
       this.mode = "login";
     },
     goToServices() {
-      this.$router.push('/services');
-    }
+      this.$router.push("/services");
+    },
   },
 };
 </script>
@@ -106,6 +106,7 @@ export default {
   background: #fffdf4;
   border-radius: 37px;
   padding: 64px 86px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .box_title {
@@ -205,6 +206,7 @@ input {
   font-weight: normal;
   font-size: 25px;
   color: #1c4a15;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 

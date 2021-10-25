@@ -63,9 +63,9 @@ export default {
         Jean: "Jeudi/Vendredi/Dimanche",
       },
       tarif: {
-        Ginette: "10",
-        Bernard: "50",
-        Jean: "20",
+        Ginette: 10,
+        Bernard: 50,
+        Jean: 20,
       },
     };
   },
@@ -92,18 +92,19 @@ export default {
   display: grid;
   grid-template-columns: 30% 70%;
   border-radius: 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .left {
   padding-bottom: 30px;
   margin-bottom: 30px;
-
   border-bottom: 2px solid #1c4a15;
 }
 
 img {
   width: 200px;
   height: 200px;
+  border-radius: 28px;
 }
 
 .right {
@@ -152,6 +153,7 @@ img {
   font-weight: normal;
   font-size: 25px;
   color: #1c4a15;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
