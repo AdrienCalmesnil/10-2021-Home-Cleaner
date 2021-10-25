@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       date: {
-        Ginette: "lundi/mardi",
+        Ginette: "Lundi/Mardi",
         Bernard: "Samedi",
         Jean: "Jeudi/Vendredi/Dimanche",
       },
@@ -119,7 +119,6 @@ img {
   font-size: 20px;
   letter-spacing: 0.7px;
   color: #1c4a15;
-  cursor: pointer;
 }
 
 .contact {
@@ -136,7 +135,6 @@ img {
   font-size: 20px;
   letter-spacing: 0.7px;
   color: #1c4a15;
-  cursor: pointer;
 }
 
 .contact_button {
@@ -145,6 +143,7 @@ img {
 }
 
 .contact_button button {
+  cursor: pointer;
   padding: 20px 40px;
   background: #e9e3d1;
   border: none;

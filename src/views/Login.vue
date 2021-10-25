@@ -208,13 +208,11 @@ input {
   color: #1c4a15;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-}
-
-.but_login {
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.but_login:hover {
+#but_login:hover {
   transform: scale(1.03);
 }
 </style>

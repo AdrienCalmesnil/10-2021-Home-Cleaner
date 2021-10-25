@@ -27,8 +27,14 @@
           </div>
         </div>
         <footer>
-          <div class="footer_left">gauche</div>
-          <div class="footer_right">droite</div>
+          <div class="footer_left">
+            <p class="note">Note : 4.5/5</p>
+          </div>
+          <div class="footer_right">
+            <div class="contact_button">
+              <button @click="goToContact()">Contacter</button>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
@@ -64,15 +70,23 @@ export default {
       },
       services: {
         Ginette: 1090,
+        Bernard: 158,
+        Jean: 3156,
       },
       clients: {
         Ginette: 300,
+        Bernard: 88,
+        Jean: 920,
       },
       dispo: {
-        Ginette: "lundi/mardi",
+        Ginette: "Lundi/Mardi",
+        Bernard: "Samedi",
+        Jean: "Jeudi/Vendredi/Dimanche",
       },
       tarif: {
         Ginette: 10,
+        Bernard: 50,
+        Jean: 20,
       },
     };
   },
@@ -143,14 +157,43 @@ p {
 .services,
 .clients,
 .dispo,
-.tarif {
+.tarif,
+.note {
   display: flex;
   justify-content: flex-start;
 }
 
 footer {
-  margin-top: 10%;
+  margin-top: 3%;
   display: grid;
   grid-template-columns: 50% 50%;
+}
+
+.footer_left {
+  padding-left: 16%;
+}
+
+.contact_button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact_button button {
+  cursor: pointer;
+  padding: 20px 40px;
+  background: #e9e3d1;
+  border: none;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: #1c4a15;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.contact_button button:hover {
+  transform: scale(1.03);
 }
 </style>
