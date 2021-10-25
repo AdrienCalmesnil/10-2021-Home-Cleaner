@@ -9,7 +9,9 @@
         <div class="box_right right">
           <div class="contact">
             <p class="contact_name">Ginette Ménagère</p>
-            <div class="contact_button"><button>Contacter</button></div>
+            <div class="contact_button">
+              <button @click="goToContact()">Contacter</button>
+            </div>
           </div>
           <p class="dispo">Disponible : {{ date.Ginette }}</p>
           <p class="tarif">Tarif horaire : {{ tarif.Ginette }}€/heure</p>
@@ -20,7 +22,9 @@
         <div class="box_right right">
           <div class="contact">
             <p class="contact_name">Bernard Savon</p>
-            <div class="contact_button"><button>Contacter</button></div>
+            <div class="contact_button">
+              <button @click="goToContact()">Contacter</button>
+            </div>
           </div>
           <p class="dispo">Disponible : {{ date.Bernard }}</p>
           <p class="tarif">Tarif horaire : {{ tarif.Bernard }}€/heure</p>
@@ -31,7 +35,9 @@
         <div class="box_right right">
           <div class="contact">
             <p class="contact_name">Jean Raenette</p>
-            <div class="contact_button"><button>Contacter</button></div>
+            <div class="contact_button">
+              <button @click="goToContact()">Contacter</button>
+            </div>
           </div>
           <p class="dispo">Disponible : {{ date.Jean }}</p>
           <p class="tarif">Tarif horaire : {{ tarif.Jean }}€/heure</p>
@@ -63,6 +69,11 @@ export default {
       },
     };
   },
+  methods: {
+    goToContact() {
+      this.$router.push("/contact");
+    },
+  },
 };
 </script>
 
@@ -79,7 +90,7 @@ export default {
   padding: 3% 5% 3% 5%;
   background: #fffdf4;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 30% 70%;
   border-radius: 30px;
 }
 
@@ -101,39 +112,38 @@ img {
   border-bottom: 2px solid #1c4a15;
 }
 
-.right p{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 0.7px;
-    color: #1C4A15;
-    cursor: pointer;
+.right p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  color: #1c4a15;
+  cursor: pointer;
 }
 
 .contact {
   display: grid;
   grid-template-columns: 50% 50%;
-
 }
 
 .contact_name {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 20%;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 0.7px;
-    color: #1C4A15;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  color: #1c4a15;
+  cursor: pointer;
 }
 
-.contact_button{
-    display: flex;
-    justify-content: flex-end;
+.contact_button {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.contact_button button{
+.contact_button button {
   padding: 20px 40px;
   background: #e9e3d1;
   border: none;
@@ -146,13 +156,14 @@ img {
   transition: all 0.3s ease;
 }
 
-.contact_button button:hover{
-    transform: scale(1.03);
+.contact_button button:hover {
+  transform: scale(1.03);
 }
 
-.dispo, .tarif{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 10%;
+.dispo,
+.tarif {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5%;
 }
 </style>
