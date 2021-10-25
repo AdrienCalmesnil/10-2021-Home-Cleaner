@@ -9,7 +9,9 @@
           <li class="items_item" id="item_one" @click="goToServices()">
             Services
           </li>
-          <li class="items_item" id="item_two">Contact</li>
+          <!-- <li class="items_item" id="item_two" @click="goToContact()">
+            Contact
+          </li> -->
         </div>
       </ul>
     </div>
@@ -28,6 +30,9 @@ export default {
     },
     goToHome() {
       this.$router.push("/");
+    },
+    goToContact() {
+      this.$router.push("/contact");
     },
   },
 };

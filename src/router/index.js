@@ -6,6 +6,7 @@ import NotFound from "@/views/NotFound.vue";
 import Services from "@/views/Services.vue";
 import Header from "@/components/Header.vue";
 import Contact from "@/views/Contact.vue";
+import Reserve from "@/views/Reserve.vue";
 
 const routes = [
   {
@@ -62,6 +63,14 @@ const routes = [
     component: Contact,
     meta: {
       title: "Contact",
+    },
+  },
+  {
+    name: "Reserve",
+    path: "/reserve",
+    component: Reserve,
+    meta: {
+      title: "Reserve",
     },
   },
 ];

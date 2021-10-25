@@ -31,8 +31,8 @@
             <p class="note">Note : 4.5/5</p>
           </div>
           <div class="footer_right">
-            <div class="contact_button">
-              <button @click="goToContact()">Contacter</button>
+            <div class="contact_button" @click="goToReserve()">
+              <button>Réserver</button>
             </div>
           </div>
         </footer>
@@ -89,6 +89,11 @@ export default {
         Jean: 20,
       },
     };
+  },
+  methods: {
+    goToReserve() {
+      this.$router.push("/reserve");
+    },
   },
 };
 </script>
