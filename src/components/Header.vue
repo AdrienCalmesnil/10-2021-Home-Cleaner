@@ -80,8 +80,8 @@ export default {
   display: inline-block;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
-
+/* 
 .items #item_one {
   margin-right: 50px;
-}
+} */
 </style>
