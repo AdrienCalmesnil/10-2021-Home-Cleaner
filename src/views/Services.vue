@@ -49,6 +49,7 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import listEmp from "../../data.js";
 
 export default {
   name: "services",
@@ -61,6 +62,7 @@ export default {
         Ginette: "Lundi/Mardi",
         Bernard: "Samedi",
         Jean: "Jeudi/Vendredi/Dimanche",
+        liste : listEmp 
       },
       tarif: {
         Ginette: 10,
