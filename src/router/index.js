@@ -59,7 +59,7 @@ const routes = [
   },
   {
     name: "Contact",
-    path: "/contact",
+    path: "/contact/:id",
     component: Contact,
     meta: {
       title: "Contact",

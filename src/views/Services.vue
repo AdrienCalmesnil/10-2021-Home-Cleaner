@@ -3,6 +3,25 @@
     <Header></Header>
     <div class="services_wrapper">
       <div class="services_wrapper_box box">
+        <div v-for="emp in listEmp" :key="emp.id">
+          <div class="grid-template">
+            <div class="box_left left">
+              <img :src="require(`../../public/assets/images/${emp.img}`)" alt="" />
+            </div>
+            <div class="box_right right">
+              <div class="contact">
+                <p class="contact_name">{{emp.name}}</p>
+                <div class="contact_button">
+                  <button @click="goToContact(emp.id-1)">Contacter</button>
+                </div>
+              </div>
+              <p class="dispo">Disponible : {{ emp.dispo }}</p>
+              <p class="tarif">Tarif horaire : {{ emp.tarif }}€/heure</p>
+            </div>
+          </div>
+        </div>
+
+        <!--
         <div class="box_left left">
           <img src="../../public/assets/images/ginette.jpg" alt="" />
         </div>
@@ -42,6 +61,7 @@
           <p class="dispo">Disponible : {{ date.Jean }}</p>
           <p class="tarif">Tarif horaire : {{ tarif.Jean }}€/heure</p>
         </div>
+      -->
       </div>
     </div>
   </div>
@@ -58,11 +78,12 @@ export default {
   },
   data() {
     return {
+      listEmp: listEmp,
       date: {
         Ginette: "Lundi/Mardi",
         Bernard: "Samedi",
         Jean: "Jeudi/Vendredi/Dimanche",
-        liste : listEmp 
+        liste : listEmp
       },
       tarif: {
         Ginette: 10,
@@ -72,8 +93,8 @@ export default {
     };
   },
   methods: {
-    goToContact() {
-      this.$router.push("/contact");
+    goToContact(id) {
+      this.$router.push("/contact/"+id);
     },
   },
 };
@@ -91,12 +112,15 @@ export default {
   margin: 3% 10% 3% 10%;
   padding: 3% 5% 3% 5%;
   background: #fffdf4;
-  display: grid;
-  grid-template-columns: 30% 70%;
+  /*display: grid;*/
+  /*grid-template-columns: 30% 70%;*/
   border-radius: 30px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
-
+.grid-template{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
 .left {
   padding-bottom: 30px;
   margin-bottom: 30px;

@@ -5,25 +5,25 @@
       <div class="contact_wrapper_box">
         <div class="contact_wrapper_top top">
           <div class="top_left">
-            <img src="../../public/assets/images/ginette.jpg" alt="" />
+            <img :src="require(`../../public/assets/images/${listEmp[idElem].img}`)" alt="" />
           </div>
 
           <div class="top_right">
-            <p class="name">{{ menagere.name.Ginette }}</p>
-            <p class="age">{{ menagere.age.Ginette }} ans</p>
+            <p class="name">{{ listEmp[idElem].name }}</p>
+            <p class="age">{{listEmp[idElem].age }} ans</p>
             <p class="experience">
-              {{ menagere.experience.Ginette }} d'expérience
+              {{ listEmp[idElem].experience }} d'expériences
             </p>
           </div>
         </div>
         <div class="contact_wrapper_bottom bottom">
           <div class="bottom_left">
-            <p class="services">{{ services.Ginette }} services réalisés</p>
-            <p class="clients">{{ clients.Ginette }} clients</p>
+            <p class="services">{{ listEmp[idElem].services }} services réalisés</p>
+            <p class="clients">{{ listEmp[idElem].clients }} clients</p>
           </div>
           <div class="bottom_right">
-            <p class="dispo">Disponible le : {{ dispo.Ginette }}</p>
-            <p class="tarif">Tarif horaire : {{ tarif.Ginette }}€/heure</p>
+            <p class="dispo">Disponible le : {{ listEmp[idElem].dispo }}</p>
+            <p class="tarif">Tarif horaire : {{ listEmp[idElem].tarif }}€/heure</p>
           </div>
         </div>
         <footer>
@@ -43,6 +43,7 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import listEmp from "../../data.js";
 
 export default {
   name: "Contact",
@@ -51,43 +52,8 @@ export default {
   },
   data() {
     return {
-      menagere: {
-        name: {
-          Ginette: "Ginette Ménagère",
-          Bernard: "Bernard Savon",
-          Jean: "Jean Raenette",
-        },
-        age: {
-          Ginette: 97,
-          Bernard: 45,
-          Jean: 22,
-        },
-        experience: {
-          Ginette: 103,
-          Bernard: 12,
-          Jean: 3,
-        },
-      },
-      services: {
-        Ginette: 1090,
-        Bernard: 158,
-        Jean: 3156,
-      },
-      clients: {
-        Ginette: 300,
-        Bernard: 88,
-        Jean: 920,
-      },
-      dispo: {
-        Ginette: "Lundi/Mardi",
-        Bernard: "Samedi",
-        Jean: "Jeudi/Vendredi/Dimanche",
-      },
-      tarif: {
-        Ginette: 10,
-        Bernard: 50,
-        Jean: 20,
-      },
+      listEmp,
+      idElem: this.$route.params.id,
     };
   },
   methods: {
