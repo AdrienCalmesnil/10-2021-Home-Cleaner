@@ -8,7 +8,8 @@ let listEmp = [
     age:97,
     experience:103,
     services:1090,
-    clients:300
+    clients:300,
+    note:4.5
 },
 {
     id : 2,
@@ -19,18 +20,20 @@ let listEmp = [
     age:45,
     experience:12,
     services:158,
-    clients:88
+    clients:88,
+    note:2
 },
 {
     id : 3,
     name : "Jean Raenette",
     img : "jean.jpg",
-    dispo : "Jeudi/Vendredi/Dimanche",
+    dispo : "Vendredi/Dimanche",
     tarif : 20,
     age : 22,
     experience:3,
     services:3156,
-    clients:920
+    clients:920,
+    note:5
 },
 
 ];

@@ -12,7 +12,7 @@
             <p class="name">{{ listEmp[idElem].name }}</p>
             <p class="age">{{listEmp[idElem].age }} ans</p>
             <p class="experience">
-              {{ listEmp[idElem].experience }} d'expériences
+              {{ listEmp[idElem].experience }} ans d'expériences
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@
         </div>
         <footer>
           <div class="footer_left">
-            <p class="note">Note : 4.5/5</p>
+            <p class="note">Note : {{ listEmp[idElem].note }}/5</p>
           </div>
           <div class="footer_right">
             <div class="contact_button" @click="goToReserve()">
@@ -135,7 +135,7 @@ p {
 }
 
 footer {
-  margin-top: 3%;
+  margin-top: 10%;
   display: grid;
   grid-template-columns: 50% 50%;
 }
