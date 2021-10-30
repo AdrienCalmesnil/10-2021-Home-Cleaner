@@ -22,7 +22,7 @@
             <p class="clients">{{ listEmp[idElem].clients }} clients</p>
           </div>
           <div class="bottom_right">
-            <p class="dispo">Disponible le : {{ listEmp[idElem].dispo }}</p>
+            <p class="dispo">Disponible le : {{ listEmp[idElem].dispo1 }}/{{ listEmp[idElem].dispo2 }}</p>
             <p class="tarif">Tarif horaire : {{ listEmp[idElem].tarif }}€/heure</p>
           </div>
         </div>
@@ -31,7 +31,7 @@
             <p class="note">Note : {{ listEmp[idElem].note }}/5</p>
           </div>
           <div class="footer_right">
-            <div class="contact_button" @click="goToReserve()">
+            <div class="contact_button" @click="goToReserve(listEmp[idElem].id-1)">
               <button>Réserver</button>
             </div>
           </div>
@@ -57,8 +57,8 @@ export default {
     };
   },
   methods: {
-    goToReserve() {
-      this.$router.push("/reserve");
+    goToReserve(id) {
+      this.$router.push("/reserve/"+id);
     },
   },
 };

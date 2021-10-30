@@ -15,53 +15,11 @@
                   <button @click="goToContact(emp.id-1)">Contacter</button>
                 </div>
               </div>
-              <p class="dispo">Disponible : {{ emp.dispo }}</p>
+              <p class="dispo">Disponible : {{ emp.dispo1 }}/{{ emp.dispo2 }}</p>
               <p class="tarif">Tarif horaire : {{ emp.tarif }}€/heure</p>
             </div>
           </div>
         </div>
-
-        <!--
-        <div class="box_left left">
-          <img src="../../public/assets/images/ginette.jpg" alt="" />
-        </div>
-        <div class="box_right right">
-          <div class="contact">
-            <p class="contact_name">Ginette Ménagère</p>
-            <div class="contact_button">
-              <button @click="goToContact()">Contacter</button>
-            </div>
-          </div>
-          <p class="dispo">Disponible : {{ date.Ginette }}</p>
-          <p class="tarif">Tarif horaire : {{ tarif.Ginette }}€/heure</p>
-        </div>
-        <div class="box_left left">
-          <img src="../../public/assets/images/bernard.jpg" alt="" />
-        </div>
-        <div class="box_right right">
-          <div class="contact">
-            <p class="contact_name">Bernard Savon</p>
-            <div class="contact_button">
-              <button @click="goToContact()">Contacter</button>
-            </div>
-          </div>
-          <p class="dispo">Disponible : {{ date.Bernard }}</p>
-          <p class="tarif">Tarif horaire : {{ tarif.Bernard }}€/heure</p>
-        </div>
-        <div class="box_left left">
-          <img src="../../public/assets/images/jean.jpg" alt="" />
-        </div>
-        <div class="box_right right">
-          <div class="contact">
-            <p class="contact_name">Jean Raenette</p>
-            <div class="contact_button">
-              <button @click="goToContact()">Contacter</button>
-            </div>
-          </div>
-          <p class="dispo">Disponible : {{ date.Jean }}</p>
-          <p class="tarif">Tarif horaire : {{ tarif.Jean }}€/heure</p>
-        </div>
-      -->
       </div>
     </div>
   </div>
@@ -79,17 +37,6 @@ export default {
   data() {
     return {
       listEmp: listEmp,
-      date: {
-        Ginette: "Lundi/Mardi",
-        Bernard: "Samedi",
-        Jean: "Jeudi/Vendredi/Dimanche",
-        liste : listEmp
-      },
-      tarif: {
-        Ginette: 10,
-        Bernard: 50,
-        Jean: 20,
-      },
     };
   },
   methods: {
@@ -131,6 +78,7 @@ img {
   width: 200px;
   height: 200px;
   border-radius: 28px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .right {

@@ -67,7 +67,7 @@ const routes = [
   },
   {
     name: "Reserve",
-    path: "/reserve",
+    path: "/reserve/:id",
     component: Reserve,
     meta: {
       title: "Reserve",
