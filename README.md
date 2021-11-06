@@ -1,5 +1,10 @@
 # home-cleaner
 
+## Clone the projet in a folder in your computer
+```
+git clone https://github.com/AdrienCalmesnil/10-2021-Home-Cleaner.git
+```
+
 ## Project setup
 ```
 npm install
