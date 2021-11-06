@@ -10,7 +10,7 @@ git clone https://github.com/AdrienCalmesnil/10-2021-Home-Cleaner.git
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run the project
 ```
 npm run serve
 ```
